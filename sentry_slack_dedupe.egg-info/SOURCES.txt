@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+sentry_slack/__init__.py
+sentry_slack/app.py
+sentry_slack/dedupe.py
+sentry_slack/sentry.py
+sentry_slack/slack.py
+sentry_slack_dedupe.egg-info/PKG-INFO
+sentry_slack_dedupe.egg-info/SOURCES.txt
+sentry_slack_dedupe.egg-info/dependency_links.txt
+sentry_slack_dedupe.egg-info/requires.txt
+sentry_slack_dedupe.egg-info/top_level.txt
+tests/test_app.py
+tests/test_dedupe.py
