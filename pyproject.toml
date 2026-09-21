@@ -1,7 +1,7 @@
 [project]
 name = "sentry-slack-dedupe"
 version = "0.1.0"
-description = "Sentry webhook to Slack bridge with fingerprint dedupe and count-based escalation. One bug, one message."
+description = "Failure alert hub for apps and automations: Sentry, n8n and custom webhooks in, deduped Slack alerts out, with a web console that shows every decision."
 requires-python = ">=3.11"
 dependencies = ["fastapi>=0.110", "httpx>=0.27", "uvicorn>=0.29"]
 
