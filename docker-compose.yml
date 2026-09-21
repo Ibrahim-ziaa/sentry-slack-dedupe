@@ -1,0 +1,20 @@
+# Offline demo:            docker compose up --build        then open http://localhost:8103
+# Live, posting to Slack:  set SLACK_WEBHOOK_URL in .env and change DEMO_MODE to 0
+services:
+  alert-console:
+    build: .
+    ports:
+      - "8103:8080"
+    environment:
+      DEMO_MODE: "${DEMO_MODE:-1}"
+      SLACK_WEBHOOK_URL: "${SLACK_WEBHOOK_URL:-}"
+      SENTRY_CLIENT_SECRET: "${SENTRY_CLIENT_SECRET:-}"
+      HOOK_SECRET_N8N: "${HOOK_SECRET_N8N:-}"
+      HOOK_SECRET_CUSTOM: "${HOOK_SECRET_CUSTOM:-}"
+      STATE_DB: /app/state/state.db
+    volumes:
+      - alert-console-state:/app/state
+    restart: unless-stopped
+
+volumes:
+  alert-console-state:
